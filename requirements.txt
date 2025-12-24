@@ -1,5 +1,1 @@
-fastapi
-uvicorn
-firebase-admin
-pydantic
-requests
+pymongo
