@@ -1,19 +1,20 @@
-
-
 # 🔐 Password Manager (CLI-Based)
 
-A secure CLI-based Password Manager built using **Python and MongoDB**.  
-This application allows users to safely store, retrieve, update, and delete credentials using cryptographic hashing.
+A secure CLI-based Password Manager built with **Python and MongoDB**, implementing
+**industry-standard security architecture**.
+
+The application uses **SHA-256 hashing** for master password authentication and
+**AES (Fernet) encryption** for secure password storage and retrieval.
 
 ---
 
 ## 🚀 Features
-- CLI-based credential management
-- Secure password hashing using SHA-256
-- MongoDB NoSQL database
-- Full CRUD functionality
-- Fast query performance with indexed fields
-- Scalable schema design
+- Master password authentication
+- AES-encrypted password storage
+- Secure password retrieval
+- MongoDB NoSQL backend
+- Full CRUD operations
+- Indexed queries for fast access
 
 ---
 
@@ -21,13 +22,20 @@ This application allows users to safely store, retrieve, update, and delete cred
 - Python
 - MongoDB
 - pymongo
+- cryptography (Fernet / AES)
 - hashlib
 
 ---
 
-## 📦 Installation
+## 🔐 Security Design
+- Master password is never stored in plaintext
+- Encryption key derived from master password
+- Stored credentials are encrypted at rest
+- Passwords decrypted only after authentication
 
-### 1️⃣ Clone Repository
+---
+
+## ▶️ Run
 ```bash
-git clone https://github.com/<your-username>/password-manager.git
-cd password-manager
+pip install -r requirements.txt
+python password_manager.py
