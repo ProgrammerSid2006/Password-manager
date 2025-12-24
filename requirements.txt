@@ -1,2 +1,5 @@
-pymongo
-cryptography
+fastapi
+uvicorn
+firebase-admin
+pydantic
+requests
